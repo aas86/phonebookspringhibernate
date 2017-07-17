@@ -1,29 +1,51 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Это проект - телефонная книга, реализованная на следующих технологиях
 
-### What is this repository for? ###
+клиентская часть: html, css, js, knockout, jquery, jquery-ui, bootstrap, underscore
+серверная часть: spring-framework
+БД: оперативная память, уничтожается при выключении проекта
+сборка: spring + maven
+запуск: spring + tomcat
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+Что умеет делать проет:
+отображать сущетсвующие контакты
+добавлять новые контакты
 
-### How do I get set up? ###
+Что нужно добавить в проект:
+удаление контакта,
+удаление всех выбранных контактов,
+пометить контактакт как важный,
+фильрация контактов,
+выгрузка контактов в excel - подсказка используйте библиотеку: apache poi
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+По желанию:
+Можно изменить клиентскую часть вплоть до чистого html, можно поменять библиотеки и архитектуру - главное проект должен работать
 
-### Contribution guidelines ###
+Как запустить проект
+Run PhoneBookSpringApplication - данная команда собирает проект и запускает PhoneBookSpringApplication main
+Debug PhoneBookSpringApplication - данная команда собирает проект в режиме дебаг и honeBookSpringApplication main
 
-* Writing tests
-* Code review
-* Other guidelines
+Отладка серверной части:
+1) запустите проект в режиме дебаг
+2) используйте постман
 
-### Who do I talk to? ###
+Отладка клиентской части:
+1) запускайте проект в chome
+2) используйте инструменты разработчика
 
-* Repo owner or admin
-* Other community or team contact
+Реализованные методы API:
+GET {host}/phoneBook/rcp/api/v1/getAllContacts - получения списка контактов
+
+POST {host}//phoneBook/rcp/api/v1/addContact - добавление нового контакта в формате
+Тело запроса:
+{
+ "firstName": "Имя",
+ "lastName": "Фамилия",
+ "phone": "Телефон"
+}
+
+Как должен выглядеть готовый проект:
+Проект должен запускатся одной кнопкой: PhoneBookSpringApplication
+
+Чтобы проверит, что другой человек сможет запустить проект без проблем - сделайте checkout в отдельную директорию и запустите его.
