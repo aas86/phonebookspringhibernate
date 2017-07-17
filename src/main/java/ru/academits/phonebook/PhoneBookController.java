@@ -2,10 +2,7 @@ package ru.academits.phonebook;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import ru.academits.model.Contact;
 import ru.academits.model.ContactValidation;
 import ru.academits.service.ContactService;
@@ -31,7 +28,7 @@ public class PhoneBookController {
 
     @RequestMapping(value = "addContact", method = RequestMethod.POST)
     @ResponseBody
-    public ContactValidation addContact(@RequestParam Contact contact) {
+    public ContactValidation addContact(@RequestBody Contact contact) {
         return contactService.addContact(contact);
     }
 }

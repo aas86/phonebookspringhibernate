@@ -95,6 +95,8 @@ function PhoneBookModel() {
         $.ajax({
             type: "POST",
             url: "/phoneBook/rcp/api/v1/addContact",
+            dataType: 'json',
+            contentType: "application/json; charset=utf-8",
             data: JSON.stringify(contact)
         }).done(function() {
             self.serverValidation(false);
