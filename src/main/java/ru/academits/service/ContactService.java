@@ -15,13 +15,8 @@ public class ContactService {
     private ContactDao contactDao;
 
     private boolean isExistContactWithPhone(String phone) {
-        List<Contact> contactList = contactDao.getAllContacts();
-        for (Contact contact : contactList) {
-            if (contact.getPhone().equals(phone)) {
-                return true;
-            }
-        }
-        return false;
+        List<Contact> contactList = contactDao.findByPhone(phone);
+        return !contactList.isEmpty();
     }
 
     public ContactValidation validateContact(Contact contact) {
