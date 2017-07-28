@@ -4,7 +4,8 @@
 
 клиентская часть: html, css, js, knockout, jquery, jquery-ui, bootstrap, underscore
 серверная часть: spring-framework
-БД: оперативная память, уничтожается при выключении проекта
+Связь БД и Java: hibernate
+БД: MySQL установленная на компьютероре, схема phonebook, логин и пароль root
 сборка: spring + maven
 запуск: spring + tomcat
 
@@ -13,13 +14,12 @@
 добавлять новые контакты
 
 Что нужно добавить в проект:
-Логирование 
-Junit тесты
-1 задачу по расписанию
+Удаление элемента
+Таблицу звонков + апи для получения звонков по контакту
 
 Как запустить проект
 Run PhoneBookSpringApplication - данная команда собирает проект и запускает PhoneBookSpringApplication main
-Debug PhoneBookSpringApplication - данная команда собирает проект в режиме дебаг и honeBookSpringApplication main
+Debug PhoneBookSpringApplication - данная команда собирает проект в режиме дебаг и запускает phoneBookSpringApplication main
 
 Отладка серверной части:
 1) запустите проект в режиме дебаг
