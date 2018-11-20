@@ -34,7 +34,14 @@ public class GenericDaoImpl<T, PK extends Serializable> implements GenericDao<T,
     @Override
     public void saveOrUpdate(T obj) {
         sessionFactory.getCurrentSession().saveOrUpdate(obj);
+
     }
+
+    @Override
+    public void remove(T obj) {
+        sessionFactory.getCurrentSession().delete(obj);
+    }
+
 
     @Override
     public T getById(PK id) {
@@ -69,7 +76,8 @@ public class GenericDaoImpl<T, PK extends Serializable> implements GenericDao<T,
         if (order != null) {
             criteria.addOrder(order);
         }
-        return (List<T>) criteria.list();
+        List<T> list =(List<T>) criteria.list();
+        return list;
     }
 
 }

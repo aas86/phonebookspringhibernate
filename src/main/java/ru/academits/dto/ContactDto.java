@@ -1,24 +1,10 @@
-package ru.academits.model;
+package ru.academits.dto;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "contact")
-public class Contact {
-    @Id
-    @GeneratedValue
+public class ContactDto {
     private int id;
-
-    @Column
+    private int number;
     private String firstName;
-
-    @Column
     private String lastName;
-
-
-    @Column
-    private String phone;
-
 
     public int getId() {
         return id;
@@ -26,6 +12,14 @@ public class Contact {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     public String getFirstName() {
@@ -51,4 +45,7 @@ public class Contact {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
+    private String phone;
+
 }

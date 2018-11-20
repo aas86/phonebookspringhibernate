@@ -28,9 +28,16 @@ public class ContactDaoImpl extends GenericDaoImpl<Contact, Long> implements Con
     }
 
     @Override
+    public void delete(Contact contact) {
+        remove(contact);
+    }
+
+    @Override
     public List<Contact> findByPhone(String phone) {
         Map condition = new HashMap<String, Object>();
         condition.put("phone", phone);
         return findAllByMulti(condition);
     }
+
+
 }

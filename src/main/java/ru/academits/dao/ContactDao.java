@@ -12,5 +12,7 @@ public interface ContactDao {
 
     void add(Contact contact);
 
+    void delete(Contact contact);
+
     List<Contact> findByPhone(String phone);
 }

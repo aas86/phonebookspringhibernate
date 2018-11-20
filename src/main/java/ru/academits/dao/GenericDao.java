@@ -15,6 +15,9 @@ public interface GenericDao<T, PK extends Serializable> {
     @Transactional
     void saveOrUpdate(T obj);
 
+    @Transactional
+    void remove(T obj);
+
     T getById(PK id);
 
     List<T> findAllByMulti(Map<String, Object> condition);
