@@ -2,10 +2,10 @@
 
 Это проект - телефонная книга, реализованная на следующих технологиях
 
-клиентская часть: html, css, js, knockout, jquery, jquery-ui, bootstrap, underscore
+клиентская часть: html, css, jquery, bootstrap, underscore
 серверная часть: spring-framework
 Связь БД и Java: hibernate
-БД: MySQL установленная на компьютероре, схема phonebook, логин и пароль root
+БД: MySQL установленная на компьютероре
 сборка: spring + maven
 запуск: spring + tomcat
 
@@ -21,13 +21,7 @@
 Run PhoneBookSpringApplication - данная команда собирает проект и запускает PhoneBookSpringApplication main
 Debug PhoneBookSpringApplication - данная команда собирает проект в режиме дебаг и запускает phoneBookSpringApplication main
 
-Отладка серверной части:
-1) запустите проект в режиме дебаг
-2) используйте постман
 
-Отладка клиентской части:
-1) запускайте проект в chome
-2) используйте инструменты разработчика
 
 Реализованные методы API:
 GET {host}/phoneBook/rcp/api/v1/getAllContacts - получения списка контактов
@@ -39,8 +33,4 @@ POST {host}//phoneBook/rcp/api/v1/addContact - добавление нового
  "lastName": "Фамилия",
  "phone": "Телефон"
 }
-
-Как должен выглядеть готовый проект:
-Проект должен запускатся одной кнопкой: PhoneBookSpringApplication
-
-Чтобы проверит, что другой человек сможет запустить проект без проблем - сделайте checkout в отдельную директорию и запустите его.
+POST {host}//phoneBook/rcp/api/v1/deleteContac
